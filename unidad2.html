@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura de Computadoras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://informatecdigital.com/wp-content/uploads/2023/10/Arquitectura-Computadoras-1024x585.png.webp'); /* Ruta de la imagen de fondo */
+            background-size: cover; /* Ajusta la imagen para que cubra toda la pantalla */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .post {
+            margin-bottom: 40px;
+        }
+        .post h2 {
+            font-size: 2em;
+            color: #333;
+        }
+        .post p {
+            font-size: 1em;
+            color: #666;
+        }
+        .post img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Página Web</h1>
+            <h2>Arquitectura De Computadoras</h2>
+        </header>
+        
+      <section class="post">
+        <h2>Unidad 2</h2>
+        <p><strong>2.1 Organización del procesador. </strong><br>
+        </p>
+
+          <p>La Unidad de Procesamiento (CPU), también conocida como procesador, dirige el funcionamiento del computador y realiza tareas de procesamiento de datos. Incluye registros visibles para el usuario y registros de control/estado, como el contador de programa. Estos registros gestionan una amplia gama de operaciones, como cálculos, comparaciones numéricas y transferencias de datos en respuesta a las solicitudes de los programas en ejecución</p>
+          <p><strong>2.2 Estructura de registros.
+ </strong>          
+        <p>Los registros de la CPU se utilizan para controlar las instrucciones en ejecución, gestionar el direccionamiento de memoria y facilitar las operaciones aritméticas. Hay tres tipos principales de registros: datos, direcciones e índice, que desempeñan un papel crucial en diversas operaciones de la CPU. El tamaño de los registros varía según el CPU, desde registros de 8 o 16 bits en procesadores simples hasta registros de 32, 48 o 64 bits en procesadores más complejos.        
+        <p><strong>2.2 Estructura de registros. </strong>        
+        <p>Los registros de la CPU se utilizan para controlar las instrucciones en ejecución, gestionar el direccionamiento de memoria y facilitar las operaciones aritméticas. Hay tres tipos principales de registros: datos, direcciones e índice, que desempeñan un papel crucial en diversas operaciones de la CPU. El tamaño de los registros varía según el CPU, desde registros de 8 o 16 bits en procesadores simples hasta registros de 32, 48 o 64 bits en procesadores más complejos.        
+        <p><strong>2.2.1 Registros visibles para el usuario.</strong>        
+        <p>Los registros visibles para el usuario en una CPU se pueden  clasificar en varios tipos: uso general, datos, direcciones y códigos de  condición. Los registros de uso general son asignables por el programador y  pueden cumplir diversas funciones, aunque pueden haber restricciones, como  registros específicos para operaciones en coma flotante. A veces, los registros  de uso general se utilizan para funciones de direccionamiento, aunque puede  haber una separación entre registros de datos y direcciones. Los códigos de  condición son bits que indican resultados de operaciones, como positivo,  negativo o nulo, y generalmente forman parte de un registro de control. Estos  bits pueden ser leídos por instrucciones de máquina, pero no pueden ser  alterados por el programador. La cantidad y longitud de los registros varían  según el diseño de la CPU, y su optimización depende de diversos factores, como  la eficiencia en el manejo de datos y direcciones.      
+        <p><strong>2.2.2 Registros de control y de estados.</strong>   
+        <p>Los registros de control en una CPU son esenciales para su funcionamiento y no suelen ser visibles para el usuario. Incluyen el contador de programa, el registro de dirección, el registro de instrucción y el registro de datos, los cuales facilitan la ejecución de instrucciones y el intercambio de datos con la memoria. También existen registros de estado, conocidos como registros de bandera, que contienen bits que indican información sobre el estado y los resultados de las operaciones realizadas por la CPU. Estos bits tienen propósitos únicos, como indicar desbordamientos, resultados nulos o habilitar interrupciones. Los registros de estado son fundamentales para la programación y control de la CPU durante la ejecución de instrucciones.</p>
+        <p><strong>2.2.3 Ejemplos de registros de CPU reales</strong>   
+        <p>Los registros de CPU reales son fundamentales para el  funcionamiento de la unidad de procesamiento. Algunos ejemplos incluyen los  registros de propósito general, como EAX, EBX en x86 o R0, R1 en ARM,  utilizados para almacenar datos y realizar operaciones aritméticas. Otros  registros importantes son el puntero de pila (ESP en x86, SP en ARM), el  contador de programa (EIP en x86, PC en ARM) y el registro de bandera/estado  (EFLAGS en x86, CPSR en ARM), que almacenan información sobre el estado y los  resultados de las operaciones. Estos registros son esenciales para controlar el  flujo de ejecución del programa y realizar operaciones condicionales. Cada  arquitectura de procesador puede tener conjuntos de registros diferentes,  adaptados a sus necesidades específicas.      
+        <p><strong>2.3 El ciclo de instrucción</strong>     
+        <p>El ciclo de instrucción en una computadora consta de cuatro  etapas: búsqueda, decodificación, ejecución y almacenamiento. En la etapa de  búsqueda, se obtienen las instrucciones de la memoria. La decodificación  traduce estas instrucciones en señales comprensibles para la computadora. La  etapa de ejecución implica llevar a cabo los comandos, mientras que el  almacenamiento implica escribir los resultados en la memoria. En algunas  computadoras, estas etapas se completan una por una antes de pasar a la  siguiente instrucción. Sin embargo, la mayoría de las computadoras modernas  utilizan el pipelining, lo que permite iniciar la búsqueda de una segunda  instrucción antes de que se haya completado el ciclo de la primera. Esto mejora  la eficiencia del procesamiento al no tener que esperar a que una instrucción  complete su ciclo antes de buscar la siguiente.        
+        <p><strong>2.3 El ciclo de instrucción:</strong> El ciclo Fetch-Decode-Execute es esencial para la ejecución de programas en una computadora. Consiste en traer la instrucción desde la memoria, decodificarla, cargar los parámetros, ejecutarla, almacenar el resultado y actualizar el registro PC. El pipelining y la segmentación son técnicas que optimizan este ciclo para aumentar la eficiencia y velocidad del procesamiento.
+        <p><strong>2.3.2 Segmentación de instrucciones:</strong> La segmentación es una estrategia para aumentar el rendimiento de los sistemas electrónicos digitales, como los microprocesadores. Divide el proceso en etapas para maximizar la frecuencia de trabajo y minimizar la latencia entre etapas.</p>
+        <p><strong>2.3.3 Conjunto de instrucciones, Características y funciones:</strong> El conjunto de instrucciones especifica las instrucciones que una CPU puede entender y ejecutar. Existen tres tipos principales: CISC, RISC y SISC, cada uno con características y funciones específicas. Los modos de direccionamiento son las diferentes formas de especificar un operando dentro de una instrucción en lenguaje ensamblador.</p>
+        <p><strong>2.3.4 Modos de direccionamiento:</strong> Los modos de direccionamiento son las diferentes maneras de especificar un operando dentro de una instrucción en lenguaje ensamblador. Hay varios modos, como inmediato, directo, indirecto, basado en registro, indexado y relativo.</p>
+        <p>&nbsp;</p>
+        <p>                
+        <p>                
+        <p><br>
+      </section>
+
+        <section class="post"></section>
+        <section class="post"> </section>
+    </div>
+</body>
+</html>
